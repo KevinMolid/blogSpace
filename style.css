@@ -1,0 +1,58 @@
+body {
+    color: #fff;
+    background: #1c2529;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, p, small, ul {
+    margin: 0;
+}
+
+header {
+    padding: 2em 4em;
+    background: #283034;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        "title icons"
+        "some subscribe"
+        "nav nav";
+    gap: 1em;
+}
+
+.header-logo-wrapper {
+    grid-area: title;
+}
+
+.header-icon-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2em;
+    grid-area: icons;
+}
+
+nav {
+    grid-area: nav;
+    justify-self: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 0.6em;
+    font-weight: 600;
+}
+
+nav ul li {
+    padding: 0.3em 0.6em;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
